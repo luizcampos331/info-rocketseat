@@ -1,0 +1,225 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+:root {
+  --color-purple: rgb(113, 89, 193);
+}
+
+* {
+  /*Margin, preenchimento e bordas da página toda*/
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #282a36;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+header {
+  padding: 30px;
+  border-bottom: 1px solid #333;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+header div {
+  text-align: center;
+}
+
+header div a {
+  color: white;
+  font-size: 20px;
+  margin: 0 30px;
+  text-decoration: none;
+}
+
+header div a:hover {
+  color: var(--color-purple);
+  transition: color 200ms;
+}
+
+#page {
+  color: var(--color-purple);
+  font-size: 20px;
+  margin: 0 30px;
+  text-decoration: none;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 30px;
+}
+
+/*===CARDS===*/
+.cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  /*Dispaly em grade*/
+  display: grid;
+  /*grade com 3 colunas do mesmo tamanho*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Espacamento entre as celulas do grid*/
+  gap: 50px;
+}
+
+.card {
+  /*Card com borda de 2px solida*/
+  border: 2px solid;
+  /*Alinhamento do texto e imagem no centro*/
+  text-align: center;
+  /*Altura de 500px*/
+  height: 500px;
+  /*Imagem como backgroud*/
+  background: url('https://skylab.rocketseat.com.br/static/media/FeaturedCardBg.40a7d53e.png') 0% / cover;
+}
+
+.card_number1 {
+  border: 2px solid #7159c1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 50px 0 0 140px;
+}
+
+.card_number1 p {
+  padding-top: 15px;
+}
+
+
+.card_modules1 {
+  padding-top: 50px;
+  color: #7159c1;
+}
+
+.card_number2 {
+  border: 2px solid #fd951f;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 50px 0 0 140px;
+}
+
+.card_number2 p {
+  padding-top: 15px;
+}
+
+.card_modules2 {
+  flex: 1;
+  padding-top: 50px;
+  color: #fd951f;
+}
+
+.card_number3 {
+  border: 2px solid #04d361;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 50px 0 0 140px;
+}
+
+.card_number3 p {
+  padding-top: 15px;
+}
+
+.card_modules3 {
+  flex: 1;
+  padding-top: 50px;
+  color: #04d361;
+}
+
+.card_image {
+  padding-top: 50px;
+}
+
+.card_price {
+  padding-top: 70px;
+}
+
+.card_price h2 {
+  font-size: 20px;
+  color: #9b9b9b;
+}
+
+/*===MODAL===*/
+.modal-overlay {
+  /*Cor de fundo com transparencia*/
+  background-color: rgba(0, 0, 0, 0.7);
+  /*Largura 100%*/
+  width: 100%;
+  /*Altura 100%*/
+  height: 100%;
+  /*Posição fixa*/
+  position: fixed;
+  /*Distancia do topo em 0*/
+  top: 0;
+  /*Opacidade 0 para sumir o modal*/
+  opacity: 0;
+  /*Visibilidade escondida*/
+  visibility: hidden;
+}
+
+.modal {
+  /*Cor do fundo*/
+  background-color: white;
+  /*Largura 70%*/
+  width: 70%;
+  /*Altura 90%*/
+  height: 90%;
+  /*Margem 5vh (Viewport height - Visão da altura) inferior e superior e nas laterais automático*/
+  margin: 5vh auto 0;
+  /*Posição relativa*/
+  position: relative;
+}
+
+.modal .close-modal {
+  /*Cor do icone de close*/
+  color: black;
+  /*Posição absoluta respeitando o relativo a classe pai*/
+  position: absolute;
+  /*espaço de 8px para a direita*/
+  right: 8px;
+  /*espaço de 8px para do topo*/
+  top: 8px;
+  /*Cursor do mouse como clique*/
+  cursor: pointer;
+}
+
+.modal .maximize-modal {
+  /*Cor do icone de close*/
+  color: black;
+  /*Posição absoluta respeitando o relativo a classe pai*/
+  position: absolute;
+  /*espaço de 8px para a direita*/
+  right: 35px;
+  /*espaço de 8px para do topo*/
+  top: 8px;
+  /*Cursor do mouse como clique*/
+  cursor: pointer;
+}
+
+.modal-overlay.active {
+  /*Sem opacidade*/
+  opacity: 1;
+  /*Visivel*/
+  visibility: visible;
+}
+
+.modal-overlay.maximize .modal{
+  /*Largura*/
+  width: 100%;
+  /*Altura 90%*/
+  height: 100%;
+  margin: 0;
+}
+
+iframe {
+  /*Largura 100%*/ 
+  width: 100%;
+  /*Altura 90%*/
+  height: 95%;
+  /*Posição absoluta*/
+  position: absolute;
+  /*Distancia de 5% do topo*/
+  top: 5%;
+}
