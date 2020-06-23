@@ -89,6 +89,7 @@ header div a:hover {
   text-decoration: none;
   color: white;
   transition: 200ms;
+  margin: 0 5px;
 }
 
 #links-footer a:hover {

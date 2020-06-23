@@ -2,6 +2,8 @@
 const express = require('express');
 //Importação do nunjucks para template engine
 const nunjucks = require('nunjucks');
+//Importando array de data.js
+const course = require('./data');
 
 //Colocando funcionalidades do express na constante server
 const server = express();
@@ -14,20 +16,43 @@ server.set('view engine', 'njk');
 
 // === comando "npm start" no terminal para começar o servidor === //
 
-//configurando o nunjucks para a pasta de views, definindo o uso do express e a variavel que o mesmo esta usando
+//configurando o nunjucks para a pasta de views
 nunjucks.configure('views', {
-  express: server
+  //definindo o uso do express e a variavel que o mesmo esta usando
+  express: server,
+  //permite tags html dentro de variáveis neste arquivo
+  autoescape: false
 });
 
 //Rota tipo GET para a página articles.html
 server.get('/', function (req, res) {
   //Retornando a página index renderizada
-  return res.render('courses')
+  return res.render('courses', {items: course})
 });
 //Rota tipo GET para a página index.html
 server.get('/sobre', function (req, res) {
+  const about = {
+    avatar_url: "https://avatars0.githubusercontent.com/u/28929274?s=200&v=4",
+    avatar_alt: "Logo Rocketseat",
+    name: "Rocketseat",
+    description: "Plataforma de educação em tecnologia",
+    techs: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "NodeJS",
+      "ReactJS",
+      "React Native"
+    ],
+    socials: [
+      {url: "https://github.com/Rocketseat", name: "GitHub"},
+      {url: "https://www.facebook.com/rocketseat", name: "Instagram"},
+      {url: "https://www.instagram.com/rocketseat_oficial/", name: "Facebook"}
+    ]
+  }
+
   //Retornando a página index renderizada
-  return res.render('about')
+  return res.render('about', {about})
 });
 
 //Caso nenhuma rota seja encontrada
