@@ -10,7 +10,6 @@
   <a href="#computer-tecnologias-utilizadas">Tecnologias</a> |
   <a href="#dart-objetivo">Objetivo</a> |
   <a href="#package-como-baixar-o-projeto">Baixar</a>
-
 </p>
 
 ## :bookmark: Sobre
