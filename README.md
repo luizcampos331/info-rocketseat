@@ -6,26 +6,26 @@
 </h1>
 
 <p align="center">
-  <a href="#sobre">Sobre</a> |
-  <a href="#tecnologias-utilizadas">Tecnologias</a> |
-  <a href="#objetivo">Objetivo</a> |
-  <a href="#como-baixar-o-projeto">Baixar</a>
+  <a href="#bookmark-sobre">Sobre</a> |
+  <a href="#computer-tecnologias-utilizadas">Tecnologias</a> |
+  <a href="#dart-objetivo">Objetivo</a> |
+  <a href="#package-como-baixar-o-projeto">Baixar</a>
 
 </p>
 
-## Sobre
+## :bookmark: Sobre
 Site sobre a [Rocketseat](https://rocketseat.com.br/) desenvolvido no curso [LaunchBase](https://rocketseat.com.br/launchbase).
 - Rotas sendo servidas pelo NodeJS com Express.
 - Aproveitamento de código via template engine com Nunjucks.
 - Página de erro 404
 
-## Tecnologias Utilizadas
+## :computer: Tecnologias Utilizadas
 - HTML
 - CSS
 - JavaScript
 - NodeJS
 
-## Objetivo
+## :dart: Objetivo
 Sistema tem como objetivo disponibilizar informações sobre a Rocketseat
 Informações:
 - Cursos ofertados
@@ -35,7 +35,7 @@ Informações:
 - Email de contato
 - Telefone
 
-## Como Baixar o projeto
+## :package: Como Baixar o projeto
 Pelo seu terminal, escolha um local para o projeto e rode os comandos:
 ```bash
   # Clonar o repositório
