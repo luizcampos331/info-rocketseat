@@ -21,7 +21,8 @@ nunjucks.configure('views', {
   //definindo o uso do express e a variavel que o mesmo esta usando
   express: server,
   //permite tags html dentro de variáveis neste arquivo
-  autoescape: false
+  autoescape: false,
+  noCache: true
 });
 
 //Rota tipo GET para a página articles.html
@@ -29,6 +30,27 @@ server.get('/', function (req, res) {
   //Retornando a página index renderizada
   return res.render('courses', {items: course})
 });
+
+//Rota tipo GET para a página course-description.html atravez do id
+server.get("/cursos/:id", function(req, res) {
+  //Pega o id da URL
+  const id = req.params.id;
+
+  //Salva na variavel data os dados da posição do array em que o id na url seja igual ao id do array
+  const data = course.find(function(page) {
+      //Se achar id igual retorna true, se não achar nenhum retorna false
+      return page.id == id
+  });
+
+  //Se data for false ele renderiza a pagina de erro 404
+  if(!data) {
+    return res.status(404).render("not-found");
+  }
+
+  //Se id for true, renderiza a página course-description
+  return res.render('course-description', {id, data});
+});
+
 //Rota tipo GET para a página index.html
 server.get('/sobre', function (req, res) {
   const about = {
@@ -46,8 +68,8 @@ server.get('/sobre', function (req, res) {
     ],
     socials: [
       {url: "https://github.com/Rocketseat", name: "GitHub"},
-      {url: "https://www.facebook.com/rocketseat", name: "Instagram"},
-      {url: "https://www.instagram.com/rocketseat_oficial/", name: "Facebook"}
+      {url: "https://www.facebook.com/rocketseat", name: "Facebook"},
+      {url: "https://www.instagram.com/rocketseat_oficial/", name: "Instagram"}
     ]
   }
 

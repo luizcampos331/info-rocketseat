@@ -126,6 +126,8 @@ header div a:hover {
   height: 500px;
   /*Imagem como backgroud*/
   background: url('https://skylab.rocketseat.com.br/static/media/FeaturedCardBg.40a7d53e.png') 0 / cover;
+  /*Cursor tipo mão*/
+  cursor: pointer;
 }
 
 .card_number1 {
@@ -318,4 +320,17 @@ iframe {
 #erro .links a:hover {
   color: var(--color-purple);
   padding: 5px;
+}
+
+/*===Página - course-description===*/
+#course h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.page iframe {
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+  background: white;
 }

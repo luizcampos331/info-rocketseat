@@ -16,25 +16,6 @@ for(let card of cards) {
   card.addEventListener("click", function() {
     //Guardo o valor do atributo id de cada card na constante id
     const id = card.getAttribute('id')
-    //Adicionando o "active" a lista de classes do modalOverlay
-    modalOverlay.classList.add('active');
-    //Procure no contexto do modalOverlay o objeto iframe e adicione em seu src o link da rocketseat
-    modalOverlay.querySelector('iframe').src = `https://rocketseat.com.br/${id}`
+    window.location.href = `/cursos/${id}`
   });
 }
-//addEventListener é um ouvidor de eventos, nesse caso o evento de click
-document.querySelector('.close-modal').addEventListener("click", function() {
-  //Removendo o "active" a lista de classes do modalOverlay
-  modalOverlay.classList.remove('active');
-  modalOverlay.classList.remove('maximize');
-  //Procure no contexto do modalOverlay o objeto iframe e limpa o valor do src
-  modalOverlay.querySelector('iframe').src = "";
-});
-
-document.querySelector('.maximize-modal').addEventListener("click", function() {
-  if(modalOverlay.classList.contains('maximize')){
-    modalOverlay.classList.remove('maximize')
-  } else {
-    modalOverlay.classList.add('maximize');
-  }
-});
