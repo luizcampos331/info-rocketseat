@@ -1,8 +1,8 @@
 <h1 align="center">
-  <img src="https://ik.imagekit.io/eluiz27/launchbase_FTndICw17.png" height="250">
+  <img src="https://ik.imagekit.io/eluiz27/launchbase_FTndICw17.png" height="230">
 </h1>
 <h1 align="center">
-  <img src="assets/demo.gif">
+  <img src="public/assets/demo.gif">
 </h1>
 
 <p align="center">
@@ -14,22 +14,26 @@
 </p>
 
 ## Sobre
-Primeiro sistema WEB front-end desenvolvido no curso **LaunchBase** da Rocketseat
+Site sobre a [Rocketseat](https://rocketseat.com.br/) desenvolvido no curso [LaunchBase](https://rocketseat.com.br/launchbase).
+- Rotas sendo servidas pelo NodeJS com Express.
+- Aproveitamento de código via template engine com Nunjucks.
+- Página de erro 404
 
 ## Tecnologias Utilizadas
 - HTML
 - CSS
 - JavaScript
+- NodeJS
 
 ## Objetivo
 Sistema tem como objetivo disponibilizar informações sobre a Rocketseat
 Informações:
+- Cursos ofertados
+- Tecnologias utilizadas
+- Redes sociais
 - Comunidade do Discord
 - Email de contato
 - Telefone
-- Tecnologias utilizadas
-- Redes sociais
-- Cursos ofertados
 
 ## Como Baixar o projeto
 Pelo seu terminal, escolha um local para o projeto e rode os comandos:
@@ -40,4 +44,6 @@ Pelo seu terminal, escolha um local para o projeto e rode os comandos:
   # Entrar no diretório
   $ cd info-rocketseat
 
+  # Baixando dependencias
+  $ npm install
 ```

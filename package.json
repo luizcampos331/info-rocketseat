@@ -1,0 +1,27 @@
+{
+  "name": "info-rocketseat",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">   <img src=\"https://ik.imagekit.io/eluiz27/launchbase_FTndICw17.png\" height=\"250\"> </h1> <h1 align=\"center\">   <img src=\"assets/demo.gif\"> </h1>",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizcampos331/info-rocketseat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizcampos331/info-rocketseat/issues"
+  },
+  "homepage": "https://github.com/luizcampos331/info-rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
