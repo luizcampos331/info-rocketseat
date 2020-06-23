@@ -17,6 +17,7 @@
 Site sobre a [Rocketseat](https://rocketseat.com.br/) desenvolvido no curso [LaunchBase](https://rocketseat.com.br/launchbase).
 - Rotas sendo servidas pelo NodeJS com Express.
 - Aproveitamento de código via template engine com Nunjucks.
+- Dados dinâmicos das páginas de: cursos e sobre
 - Página de erro 404
 
 ## :computer: Tecnologias Utilizadas
